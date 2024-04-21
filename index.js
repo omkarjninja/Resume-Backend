@@ -9,8 +9,7 @@ const studentRoute = require("./routes/user.routes");
 // Connecting mongoDB Database
 mongoose
   .connect(
-    "mongodb+srv://ojadhav250:OIyYq8zGJvKK7nLF@cluster1.wz4vdqc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1"
-  )
+    "mongodb+srv://ojadhav250:OIyYq8zGJvKK7nLF@cluster1.wz4vdqc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1", { useNewUrlParser: true, useUnifiedTopology: true } )
   .then((x) => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`
