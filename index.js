@@ -37,7 +37,7 @@ const server = app.listen(port, () => {
 
 // 404 Error
 app.use((req, res, next) => {
-  next(createError(404));
+  console.log("found some error)
 });
 
 app.use(function (err, req, res, next) {
